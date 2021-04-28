@@ -1,4 +1,6 @@
-# channels
+# Channels test task
+
+## [Demo](https://anastasiaprivalova.github.io/Channels/)
 
 ## Project setup
 ```

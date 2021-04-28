@@ -3,7 +3,7 @@
     <span
       :style="{pointerEvents: 'none'}"
       class="absolute inset-y-0 left-0 px-2 flex items-center">
-      <fa-icon icon="search" />
+      <fa-icon icon="search" class="text-gray-400" />
     </span>
     <input
       :value="value"
