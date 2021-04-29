@@ -12,7 +12,8 @@
       placeholder="Add channel"
       ref="input"
       tabindex="0"
-      class="min-w-full text-sm border border-gray-300 py-1 pl-8 pr-5 rounded-full focus:outline-none focus:shadow-outline" />
+      class="min-w-full text-sm border border-gray-300 py-1 pl-8 pr-5 rounded-full focus:outline-none focus:shadow-outline"
+      test-id="add-input" />
     <span
       v-if="value"
       @click.prevent="reset()"
@@ -25,16 +26,17 @@
       @focusout="showOptions = false"
       tabindex="0"
       class="absolute right-0 left-0 z-50 bg-white border border-gray-300 mt-1 mh-70 overflow-hidden overflow-y-scroll rounded-md shadow-md">
-      <ul class="py-1">
+      <ul class="py-1" test-id="add-options">
         <li
           v-for="(item, index) in searchResults"
           :key="index"
+          :test-id="`${item.label}-option`"
           @click="handleClick(item)"
           class="px-3 py-2 text-sm cursor-pointer hover:bg-gray-200">
             <fa-icon :icon="item.icon" />
             {{ item.label }}
         </li>
-        <li v-if="!searchResults.length" class="px-3 py-2 text-center">
+        <li v-if="!searchResults.length" class="px-3 py-2 text-center" test-id="no-results">
           No Results
         </li>
       </ul>

@@ -14,8 +14,8 @@
         @reorder="handleReorder" />
 
       <template v-slot:footer v-if="showControlButtons">
-        <secondary-button class="mx-2" @click="handleCancel">Cancel</secondary-button>
-        <primary-button  @click="handleApply">Apply</primary-button>
+        <secondary-button class="mx-2" @click="handleCancel" test-id="cancel-btn">Cancel</secondary-button>
+        <primary-button @click="handleApply" test-id="cancel-btn">Apply</primary-button>
       </template>
     </card>
   </div>

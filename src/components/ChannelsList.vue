@@ -8,7 +8,7 @@
     @end="isDragging = false"
     @change="handleMove">
     <transition-group type="transition" name="flip-list">
-      <li v-for="channel in channelsList" :key="channel.label" class="flex p-2">
+      <li v-for="channel in channelsList" :key="channel.label" class="flex p-2" :test-id="`${channel.label}-channel`">
         <div class="flex-1">
           <fa-icon icon="grip-vertical" class="list-group-item-move-icon text-gray-300" />
           <span class="p-2 mx-2 bg-galaxy-100 rounded">
