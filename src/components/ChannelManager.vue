@@ -15,7 +15,7 @@
 
       <template v-slot:footer v-if="showControlButtons">
         <secondary-button class="mx-2" @click="handleCancel" test-id="cancel-btn">Cancel</secondary-button>
-        <primary-button @click="handleApply" test-id="cancel-btn">Apply</primary-button>
+        <primary-button @click="handleApply" test-id="apply-btn">Apply</primary-button>
       </template>
     </card>
   </div>
